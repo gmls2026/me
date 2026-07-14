@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王燕 — 心理咨询师 · 教育顾问 | 用15年教育深耕，陪你找到心的方向</title>
+<meta name="description" content="王燕，北师大MAP临床与咨询心理学研究生，中科院心理咨询师，北京国奥心理医院项目主管。15年教育行业深耕者，从贺兰山到北师大的心路旅程，用教育和心理学的双重力量，陪你找到成长的方向。">
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",-apple-system,sans-serif;
+  color:#2D2D3F;
+  background:#F7F5F2;
+  line-height:1.8;
+  overflow-x:hidden;
+}
+
+/* ===== Brand Colors ===== */
+:root{
+  --sage:#3A6B62;
+  --sage-light:#5B9186;
+  --sage-dark:#2A4F48;
+  --sage-bg:#E8F0EE;
+  --terracotta:#C4815D;
+  --terracotta-light:#E0B29A;
+  --terracotta-bg:#FDF0E8;
+  --cream:#F7F5F2;
+  --cream2:#EDE9E4;
+  --dark:#2D2D3F;
+  --text:#3D3D4A;
+  --muted:#8B8B8B;
+  --white:#FFFFFF;
+}
+
+/* ===== Navigation ===== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  transition:all 0.3s;
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;padding:0 32px;
+  display:flex;justify-content:space-between;align-items:center;
+  height:64px;
+}
+.nav-logo{
+  font-size:1.25rem;font-weight:700;color:var(--sage);
+  letter-spacing:1px;text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+}
+.nav-logo-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--terracotta);
+}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{
+  text-decoration:none;color:var(--text);font-size:0.9rem;
+  transition:color 0.3s;position:relative;
+}
+.nav-links a:hover{color:var(--sage)}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
+  background:var(--sage);transition:width 0.3s;
+}
+.nav-links a:hover::after{width:100%}
+.nav-cta a{
+  background:var(--sage);color:#fff;padding:8px 20px;border-radius:24px;
+  text-decoration:none;font-size:0.85rem;font-weight:600;
+  transition:all 0.3s;
+}
+.nav-cta a:hover{background:var(--sage-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(58,107,98,0.25)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nav-toggle span{width:24px;height:2px;background:var(--dark);border-radius:2px;transition:0.3s}
+
+/* ===== Hero Section ===== */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:120px 32px 80px;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,var(--cream) 0%,var(--sage-bg) 40%,var(--terracotta-bg) 100%);
+}
+.hero::before{
+  content:'';position:absolute;top:-120px;right:-120px;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(58,107,98,0.06) 0%,transparent 70%);
+}
+.hero::after{
+  content:'';position:absolute;bottom:-60px;left:-80px;
+  width:350px;height:350px;border-radius:50%;
+  background:radial-gradient(circle,rgba(196,129,93,0.06) 0%,transparent 70%);
+}
+.hero-inner{
+  max-width:1200px;margin:0 auto;width:100%;
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  position:relative;z-index:1;
+}
+.hero-badge{
+  display:inline-block;background:var(--white);color:var(--sage);
+  font-size:0.85rem;font-weight:600;padding:6px 16px;border-radius:20px;
+  margin-bottom:20px;letter-spacing:1px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+.hero h1{
+  font-family:"Noto Serif SC","Source Han Serif SC","STSong",serif;
+  font-size:3.2rem;font-weight:700;line-height:1.3;
+  color:var(--dark);margin-bottom:12px;letter-spacing:2px;
+}
+.hero h1 span{color:var(--sage)}
+.hero-subtitle{
+  font-size:1.3rem;color:var(--sage);font-weight:500;
+  margin-bottom:24px;letter-spacing:1px;
+}
+.hero-desc{
+  font-size:1.05rem;color:var(--text);line-height:1.9;
+  margin-bottom:32px;max-width:520px;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.hero-tag{
+  background:var(--white);color:var(--terracotta);font-size:0.85rem;
+  padding:6px 16px;border-radius:20px;font-weight:500;
+  box-shadow:0 1px 4px rgba(0,0,0,0.04);
+}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{
+  display:inline-block;background:var(--sage);color:#fff;
+  padding:14px 36px;border-radius:32px;font-size:1rem;font-weight:600;
+  text-decoration:none;transition:all 0.3s;
+  box-shadow:0 4px 16px rgba(58,107,98,0.2);
+}
+.btn-primary:hover{background:var(--sage-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(58,107,98,0.3)}
+.btn-secondary{
+  display:inline-block;background:transparent;color:var(--sage);
+  padding:14px 36px;border-radius:32px;font-size:1rem;font-weight:600;
+  text-decoration:none;border:2px solid var(--sage);transition:all 0.3s;
+}
+.btn-secondary:hover{background:var(--sage);color:#fff}
+
+.hero-visual{
+  display:flex;justify-content:center;align-items:center;
+}
+.hero-avatar-wrap{
+  position:relative;width:320px;height:320px;
+}
+.hero-avatar-ring{
+  position:absolute;inset:-16px;border-radius:50%;
+  border:3px solid var(--sage-light);
+  opacity:0.3;
+  animation:spin 20s linear infinite;
+}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.hero-avatar-ring:nth-child(2){
+  inset:-32px;border-color:var(--terracotta-light);opacity:0.2;
+  animation-duration:25s;animation-direction:reverse;
+}
+.hero-avatar{
+  width:100%;height:100%;border-radius:50%;
+  overflow:hidden;
+  position:relative;z-index:1;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+.hero-avatar img{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+}
+
+/* ===== Section Common ===== */
+.section{padding:100px 32px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{
+  display:inline-block;font-size:0.8rem;font-weight:700;letter-spacing:3px;
+  color:var(--terracotta);text-transform:uppercase;margin-bottom:12px;
+}
+.section-title{
+  font-family:"Noto Serif SC",serif;
+  font-size:2.4rem;font-weight:700;color:var(--dark);
+  margin-bottom:16px;line-height:1.3;letter-spacing:1px;
+}
+.section-desc{
+  font-size:1.1rem;color:var(--muted);max-width:640px;
+  margin-bottom:48px;line-height:1.8;
+}
+
+/* ===== Story Section ===== */
+.story-section{background:var(--white)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.story-image-wrap{
+  position:relative;border-radius:16px;overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+.story-image{
+  width:100%;aspect-ratio:4/3;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;border-radius:16px;
+}
+.story-image img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;
+  transition:transform 6s ease;
+}
+.story-image:hover img{
+  transform:scale(1.05);
+}
+.story-image-caption{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(transparent,rgba(0,0,0,0.6));
+  color:#fff;padding:24px 20px 16px;font-size:0.9rem;
+}
+.story-quote{
+  font-family:"Noto Serif SC",serif;font-size:1.5rem;font-weight:600;
+  color:var(--sage);line-height:1.6;margin-bottom:24px;
+  padding-left:20px;border-left:4px solid var(--terracotta);
+}
+.story-text{font-size:1.05rem;color:var(--text);line-height:2;margin-bottom:20px}
+.story-highlight{
+  display:inline-block;background:linear-gradient(180deg,transparent 60%,rgba(196,129,93,0.2) 60%);
+  font-weight:600;color:var(--dark);
+}
+
+/* ===== Values ===== */
+.values-section{background:var(--cream)}
+.values-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+}
+.value-card{
+  background:var(--white);border-radius:16px;padding:32px 24px;
+  text-align:center;transition:all 0.3s;
+  box-shadow:0 2px 12px rgba(0,0,0,0.04);
+}
+.value-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.08)}
+.value-icon{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;font-size:1.8rem;
+}
+.value-icon.v1{background:var(--sage-bg);color:var(--sage)}
+.value-icon.v2{background:var(--terracotta-bg);color:var(--terracotta)}
+.value-icon.v3{background:#E8EFF8;color:#5B7FA5}
+.value-icon.v4{background:#F5F0E8;color:#A58B5B}
+.value-card h3{font-size:1.1rem;color:var(--dark);margin-bottom:8px}
+.value-card p{font-size:0.9rem;color:var(--muted);line-height:1.7}
+
+/* ===== Timeline ===== */
+.timeline-section{background:var(--white)}
+.timeline{
+  position:relative;max-width:900px;margin:0 auto;
+}
+.timeline::before{
+  content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,var(--sage) 0%,var(--terracotta) 100%);
+  transform:translateX(-50%);
+}
+.timeline-item{
+  position:relative;margin-bottom:48px;display:flex;align-items:flex-start;
+}
+.timeline-item:nth-child(odd){flex-direction:row}
+.timeline-item:nth-child(even){flex-direction:row-reverse}
+.timeline-dot{
+  position:absolute;left:50%;top:20px;width:16px;height:16px;
+  border-radius:50%;background:var(--white);border:3px solid var(--sage);
+  transform:translate(-50%,0);z-index:2;
+}
+.timeline-content{
+  width:calc(50% - 48px);padding:24px;background:var(--cream);
+  border-radius:12px;transition:all 0.3s;
+}
+.timeline-content:hover{box-shadow:0 4px 20px rgba(0,0,0,0.06);transform:translateY(-2px)}
+.timeline-year{
+  font-size:0.8rem;font-weight:700;color:var(--terracotta);letter-spacing:2px;
+  margin-bottom:6px;
+}
+.timeline-content h3{font-size:1.1rem;color:var(--dark);margin-bottom:4px}
+.timeline-role{font-size:0.9rem;color:var(--sage);font-weight:600;margin-bottom:8px}
+.timeline-desc{font-size:0.9rem;color:var(--text);line-height:1.7}
+.timeline-side{width:calc(50% - 48px)}
+
+/* ===== Capabilities ===== */
+.capabilities-section{background:var(--sage-bg)}
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cap-card{
+  background:var(--white);border-radius:16px;padding:36px 28px;
+  transition:all 0.3s;box-shadow:0 2px 12px rgba(0,0,0,0.04);
+}
+.cap-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.1)}
+.cap-number{
+  font-family:"Noto Serif SC",serif;font-size:3rem;font-weight:700;
+  color:var(--sage);opacity:0.2;line-height:1;
+}
+.cap-card h3{font-size:1.2rem;color:var(--dark);margin:8px 0 12px}
+.cap-card p{font-size:0.95rem;color:var(--text);line-height:1.8}
+.cap-card ul{list-style:none;margin-top:16px}
+.cap-card ul li{
+  font-size:0.9rem;color:var(--muted);padding:6px 0;
+  padding-left:20px;position:relative;
+}
+.cap-card ul li::before{
+  content:'';
+  position:absolute;left:0;top:14px;width:6px;height:6px;
+  border-radius:50%;background:var(--terracotta);
+}
+
+/* ===== Achievements ===== */
+.achievements-section{background:var(--white)}
+.achievements-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.achievement-card{
+  background:var(--cream);border-radius:16px;padding:32px;
+  display:flex;gap:20px;align-items:flex-start;
+  transition:all 0.3s;
+}
+.achievement-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.06)}
+.achievement-num{
+  font-family:"Noto Serif SC",serif;font-size:3rem;font-weight:700;
+  color:var(--terracotta);line-height:1;flex-shrink:0;
+}
+.achievement-info h3{font-size:1.1rem;color:var(--dark);margin-bottom:6px}
+.achievement-info p{font-size:0.9rem;color:var(--text);line-height:1.7}
+
+/* ===== Quote Section ===== */
+.quote-section{
+  background:linear-gradient(135deg,var(--sage-dark),var(--sage));
+  color:#fff;text-align:center;padding:80px 32px;
+}
+.quote-inner{max-width:700px;margin:0 auto}
+.quote-mark{font-size:5rem;line-height:1;opacity:0.3;font-family:serif}
+.quote-text{
+  font-family:"Noto Serif SC",serif;font-size:1.8rem;font-weight:600;
+  line-height:1.6;margin:16px 0 24px;
+}
+.quote-author{font-size:1rem;opacity:0.8}
+
+/* ===== CTA Section ===== */
+.cta-section{
+  background:var(--cream);text-align:center;padding:80px 32px;
+}
+.cta-section .section-title{font-size:2rem}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+
+/* ===== Contact ===== */
+.contact-section{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact-info h3{font-size:1.1rem;color:var(--dark);margin-bottom:8px}
+.contact-info p{color:var(--text);font-size:0.95rem;margin-bottom:32px}
+.contact-item{
+  display:flex;align-items:center;gap:16px;margin-bottom:20px;
+  padding:16px 20px;background:var(--cream);border-radius:12px;
+  transition:all 0.3s;
+}
+.contact-item:hover{background:var(--sage-bg)}
+.contact-icon{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--sage-bg);display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;color:var(--sage);flex-shrink:0;
+}
+.contact-detail h4{font-size:0.9rem;color:var(--dark)}
+.contact-detail span{font-size:0.85rem;color:var(--muted)}
+.contact-form-wrap{
+  background:var(--cream);border-radius:16px;padding:32px;
+}
+.contact-form-wrap h3{font-size:1.2rem;color:var(--dark);margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-group label{
+  display:block;font-size:0.85rem;font-weight:600;color:var(--text);
+  margin-bottom:6px;
+}
+.form-group input,.form-group textarea{
+  width:100%;padding:12px 16px;border:1.5px solid #E0DCD6;
+  border-radius:10px;font-size:0.95rem;font-family:inherit;
+  background:var(--white);transition:border-color 0.3s;
+  color:var(--dark);
+}
+.form-group input:focus,.form-group textarea:focus{
+  outline:none;border-color:var(--sage);
+}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-submit{
+  width:100%;padding:14px;background:var(--sage);color:#fff;
+  border:none;border-radius:32px;font-size:1rem;font-weight:600;
+  cursor:pointer;transition:all 0.3s;
+}
+.form-submit:hover{background:var(--sage-dark)}
+
+/* ===== Footer ===== */
+.footer{
+  background:var(--dark);color:rgba(255,255,255,0.7);
+  text-align:center;padding:48px 32px;font-size:0.85rem;
+}
+.footer-brand{
+  font-family:"Noto Serif SC",serif;font-size:1.3rem;font-weight:700;
+  color:#fff;margin-bottom:8px;
+}
+.footer p{margin-bottom:4px}
+.footer a{color:var(--terracotta-light);text-decoration:none}
+
+/* ===== Mobile Nav ===== */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .nav-toggle{display:flex}
+  .nav.open .nav-links{
+    display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;
+    background:var(--white);padding:24px 32px;gap:16px;
+    border-bottom:1px solid rgba(0,0,0,0.06);
+  }
+  .nav.open .nav-cta{display:block;margin-top:12px}
+
+  .hero{min-height:auto;padding:100px 24px 60px}
+  .hero-inner{grid-template-columns:1fr;gap:40px;text-align:center}
+  .hero h1{font-size:2.2rem}
+  .hero-subtitle{font-size:1.1rem}
+  .hero-desc{max-width:100%}
+  .hero-tags{justify-content:center}
+  .hero-btns{justify-content:center}
+  .hero-avatar-wrap{width:220px;height:220px}
+
+  .section{padding:60px 24px}
+  .section-title{font-size:1.8rem}
+
+  .story-grid{grid-template-columns:1fr;gap:32px}
+  .story-quote{font-size:1.2rem}
+
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+
+  .timeline::before{left:20px}
+  .timeline-item,.timeline-item:nth-child(even){flex-direction:row}
+  .timeline-dot{left:20px}
+  .timeline-content{width:calc(100% - 56px);margin-left:40px}
+  .timeline-side{display:none}
+
+  .cap-grid{grid-template-columns:1fr}
+  .achievements-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .quote-text{font-size:1.3rem}
+}
+
+@media(max-width:480px){
+  .values-grid{grid-template-columns:1fr}
+  .hero h1{font-size:1.8rem}
+  .section-title{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-dot"></span>王 燕
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#story">我的故事</a></li>
+      <li><a href="#journey">职业历程</a></li>
+      <li><a href="#capabilities">专业能力</a></li>
+      <li><a href="#achievements">成果</a></li>
+      <li><a href="#contact">联系我</a></li>
+    </ul>
+    <div class="nav-cta"><a href="#contact">预约咨询</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">&#9670; 个人品牌 · 一人公司</div>
+      <h1>我是<span>王燕</span></h1>
+      <div class="hero-subtitle">用15年教育深耕，陪你找到心的方向</div>
+      <p class="hero-desc">
+        北师大MAP临床与咨询心理学研究生 · 中科院心理咨询师<br>
+        北京国奥心理医院项目主管 · 15年教育行业深度耕耘者<br>
+        从贺兰山到北师大的心路旅程，从知道到做到的成长陪伴
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag"># 教育深耕者</span>
+        <span class="hero-tag"># 心理践行者</span>
+        <span class="hero-tag"># 成长陪伴者</span>
+        <span class="hero-tag"># 终身学习者</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#story" class="btn-primary">了解我的故事</a>
+        <a href="#contact" class="btn-secondary">与我联系</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-avatar-wrap">
+        <div class="hero-avatar-ring"></div>
+        <div class="hero-avatar-ring"></div>
+        <div class="hero-avatar">
+          <img src="王燕照片.jpg" alt="王燕" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Story ===== -->
+<section class="section story-section" id="story">
+  <div class="section-inner">
+    <div class="section-label">/ 我的故事 /</div>
+    <div class="section-title">从贺兰山到北师大的心路旅程</div>
+    <div class="section-desc">这是一个关于成长、转变与重新出发的故事。不是一个"成功学"的范本，而是一个普通人不断寻找自我的真实记录。</div>
+
+    <div class="story-grid">
+      <div class="story-image-wrap">
+        <div class="story-image">
+          <img src="helan-mountain.png" alt="贺兰山——我的起点">
+        </div>
+        <div class="story-image-caption">贺兰山 · 我的起点</div>
+      </div>
+      <div>
+        <div class="story-quote">
+          "没有伞的孩子，必须努力奔跑。但跑着跑着我发现，最重要的不是跑多快，而是知道自己要去哪。"
+        </div>
+        <p class="story-text">
+          我出生在宁夏贺兰，一个名字很诗意、生活很粗糙的地方。父母种地，家里没有书房。但我从小知道一件事：<span class="story-highlight">读书，是我改变命运的唯一出路。</span>
+        </p>
+        <p class="story-text">
+          2001年，我考上了北京化工大学。从贺兰到北京，1600公里。那是我人生第一次坐火车，第一次看见高楼，第一次知道原来世界可以这么大。大学四年，图书馆是我最常去的地方，学费和生活费靠爸妈辛苦支撑。
+        </p>
+        <p class="story-text">
+          2005年毕业，真正的考验来了。简历石沉大海，面试失败了一次又一次。最困难的时候，我跟父亲要了1000块钱。我给自己设了一个期限——必须在这1000块钱花完之前找到工作，即使是端盘子也可以。<span class="story-highlight">那段日子教会我：人生不是线性上升的，低谷才是常态。</span>
+        </p>
+        <p class="story-text">
+          2007年，我进入了文都教育。从此，教育和我的生命就绑在了一起。9年教育媒体生涯，在搜狐教育、网易教育、中国教育在线，见证并参与了中国教育行业的十年变革。期间还读完了北理工MBA。
+        </p>
+        <p class="story-text">
+          2026年，两件事同时发生——我以396分考上了北师大心理学部MAP临床与咨询方向，同时进入北京国奥心理医院担任项目主管。<span class="story-highlight">从心理学的理论学习到心理医院的一线实践，我终于把"知道"变成了"做到"。</span>策划开放日活动、搭建课程体系、拓展艺术疗愈资源——每一天都在验证：教育+心理的交叉力量，是真实有效的。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Values ===== -->
+<section class="section values-section">
+  <div class="section-inner">
+    <div class="section-label">/ 我的信念 /</div>
+    <div class="section-title">我相信的四个核心价值</div>
+    <div class="section-desc">这些信念贯穿了我15年的职业生涯，也指引着我走向心理学的新方向。</div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon v1">&#9733;</div>
+        <h3>终身成长</h3>
+        <p>从本科到MBA再到MAP，我相信成长没有终点，学习是最值得的投资。</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon v2">&#9829;</div>
+        <h3>真诚共情</h3>
+        <p>真正帮到一个人，不是给标准答案，而是陪他一起看见问题的根源。</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon v3">&#9783;</div>
+        <h3>知行合一</h3>
+        <p>从知识传递到心理疗愈，我追求的不只是"知道"，更是"做到"。</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon v4">&#9885;</div>
+        <h3>扎根深耕</h3>
+        <p>15年只做一件事——教育。深度，是我最大的护城河。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Timeline ===== -->
+<section class="section timeline-section" id="journey">
+  <div class="section-inner">
+    <div class="section-label">/ 职业历程 /</div>
+    <div class="section-title">15年，从编辑到咨询师</div>
+    <div class="section-desc">每一次转身都不是随机的跳跃，而是沿着一条内在逻辑线的自然延伸——从知识到心灵。</div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2026.04 — 现在</div>
+          <h3>北京国奥心理医院</h3>
+          <div class="timeline-role">项目主管</div>
+          <div class="timeline-desc">拓展艺术疗愈师资资源库，策划并主导"国奥心理开放日"系列活动，搭建付费课程体系框架。在实践中将表达性艺术治疗与团体辅导相结合，积累了心理医院一线运营经验。</div>
+        </div>
+        <div class="timeline-side"></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-side"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2026 — 现在</div>
+          <h3>北京师范大学心理学部</h3>
+          <div class="timeline-role">MAP 临床与咨询心理学研究生</div>
+          <div class="timeline-desc">42岁重返校园，系统学习心理咨询。初试总分396分。这不是"转型"，而是15年教育经验的"升级"——从传递知识到疗愈心灵。</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-side"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2023 — 2025</div>
+          <h3>东方启明教育科技</h3>
+          <div class="timeline-role">心理类课程顾问 / EAP项目负责人</div>
+          <div class="timeline-desc">独立负责中海油全国56个分公司EAP项目，单月最高统筹16场心理沙龙。拿到中科院心理咨询师证书，正式踏上心理学的实践之路。</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2021 — 2023</div>
+          <h3>幸知（北京）信息技术</h3>
+          <div class="timeline-role">课程策划</div>
+          <div class="timeline-desc">从0到1打造《情感主播陪跑营》，累计创收超30万元。在情感与心理的交叉领域积累了丰富的课程设计经验。</div>
+        </div>
+        <div class="timeline-side"></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-side"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2019 — 2021</div>
+          <h3>青豆说（北京）教育科技</h3>
+          <div class="timeline-role">运营主管</div>
+          <div class="timeline-desc">负责家庭教育课程包装推广，策划线上训练营。在这里开始深度接触心理学——家庭教育不只是方法问题，更是心理问题。</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2018 — 2019</div>
+          <h3>北京国文互联教育科技集团</h3>
+          <div class="timeline-role">运营总监</div>
+          <div class="timeline-desc">从零组建9人团队，打造爆款课程全网售出超1万份。头条号实现4万→29万用户增长。第一次全面负责运营全链条。</div>
+        </div>
+        <div class="timeline-side"></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-side"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2009 — 2018</div>
+          <h3>搜狐教育 / 网易教育 / 中国教育在线</h3>
+          <div class="timeline-role">高级编辑 → 频道责编 → 频道主编</div>
+          <div class="timeline-desc">9年教育媒体生涯，见证并参与了中国教育行业的十年变革。策划全国性《"我是书虫"微视频大赛》，联动300+学校、近万名学生。期间完成北理工MBA学业。</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2007 — 2009</div>
+          <h3>文都教育</h3>
+          <div class="timeline-role">网校运营</div>
+          <div class="timeline-desc">教育行业的第一站。从最基础的网校运营做起，从此和教育结下不解之缘。</div>
+        </div>
+        <div class="timeline-side"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quote ===== -->
+<section class="quote-section">
+  <div class="quote-inner">
+    <div class="quote-mark">"</div>
+    <div class="quote-text">前40年，我都在帮别人获取知识。<br>接下来的人生，我想帮别人找到自己。</div>
+    <div class="quote-author">—— 王燕</div>
+  </div>
+</section>
+
+<!-- ===== Capabilities ===== -->
+<section class="section capabilities-section" id="capabilities">
+  <div class="section-inner">
+    <div class="section-label">/ 专业能力 /</div>
+    <div class="section-title">三重交叉能力，一个完整的人</div>
+    <div class="section-desc">大多数心理咨询师不懂教育行业的底层逻辑；大多数教育从业者不懂心理学的专业方法。我同时具备两者的深度。</div>
+
+    <div class="cap-grid">
+      <div class="cap-card">
+        <div class="cap-number">01</div>
+        <h3>心理专业能力</h3>
+        <p>北师大MAP临床与咨询方向系统训练，中科院心理咨询师认证，掌握多种心理技术并有丰富实战经验。</p>
+        <ul>
+          <li>个体心理咨询</li>
+          <li>房树人绘画分析</li>
+          <li>OH卡引导技术</li>
+          <li>表达性艺术治疗</li>
+          <li>团体辅导与工作坊</li>
+          <li>EAP项目设计与执行</li>
+        </ul>
+      </div>
+
+      <div class="cap-card">
+        <div class="cap-number">02</div>
+        <h3>教育行业洞察</h3>
+        <p>15年教育行业全链条经验，从媒体到培训、从内容到运营，深度理解中国教育生态和用户真实需求。</p>
+        <ul>
+          <li>教育行业趋势分析</li>
+          <li>课程体系设计</li>
+          <li>内容策划与运营</li>
+          <li>家庭教育指导</li>
+          <li>职业发展规划</li>
+        </ul>
+      </div>
+
+      <div class="cap-card">
+        <div class="cap-number">03</div>
+        <h3>运营管理经验</h3>
+        <p>4年团队管理经验，从零组建团队，跨部门协作，大型项目管理——这些"软实力"是帮助客户拿到结果的关键。</p>
+        <ul>
+          <li>团队组建与管理</li>
+          <li>跨地域项目统筹</li>
+          <li>新媒体矩阵运营</li>
+          <li>社群运营与转化</li>
+          <li>品牌策划与执行</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Achievements ===== -->
+<section class="section achievements-section" id="achievements">
+  <div class="section-inner">
+    <div class="section-label">/ 关键成果 /</div>
+    <div class="section-title">用成果说话</div>
+    <div class="section-desc">不是空谈方法论的人——每一个数字背后都是真实的项目落地和经验积累。</div>
+
+    <div class="achievements-grid">
+      <div class="achievement-card">
+        <div class="achievement-num">396</div>
+        <div class="achievement-info">
+          <h3>北师大MAP初试高分录取</h3>
+          <p>2026年以初试总分396分（政治59/英语81/心理学综合256）的优异成绩考入北师大心理学部临床与咨询方向，42岁重启学术之路。</p>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-num">56</div>
+        <div class="achievement-info">
+          <h3>中海油EAP项目 · 全国56城</h3>
+          <p>独立统筹中海油全国56个分公司EAP心理沙龙项目，单月最高落地16场。跨地域多线程项目管理能力经得起实战检验。</p>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-num">30w</div>
+        <div class="achievement-info">
+          <h3>《情感主播陪跑营》从0到1</h3>
+          <p>主导全流程打造（市场定位→大纲策划→文案包装→销售转化→学员运营），累计创收超30万元。</p>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-num">29w</div>
+        <div class="achievement-info">
+          <h3>头条号用户增长 4万→29万</h3>
+          <p>从零搭建新媒体矩阵，头条号在短期内实现用户从4万增长到29万的突破，积累了丰富的内容运营方法论。</p>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-num">1w</div>
+        <div class="achievement-info">
+          <h3>《我是书虫》全国微视频大赛</h3>
+          <p>主导策划全国性教育活动，联动多家权威机构，吸引全国超300所中小学、近万名学生参与。</p>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-num">15</div>
+        <div class="achievement-info">
+          <h3>教育行业15年深耕</h3>
+          <p>从文都教育到搜狐教育到国文互联，从编辑到总监，15年教育行业全链条经验，见证行业十年变迁。</p>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-num">9</div>
+        <div class="achievement-info">
+          <h3>从0组建9人团队</h3>
+          <p>在国文互联从零组建并管理9人团队，覆盖平台运营、内容运营、店铺运营全链条，具备完整的管理经验。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <div class="section-inner">
+    <div class="section-title">如果你正在某个路口感到迷茫</div>
+    <div class="section-desc" style="max-width:600px;margin:16px auto 0;">
+      无论是职业发展的困惑、教育孩子的焦虑，还是对自我成长的探索——我愿意陪你聊一聊。
+    </div>
+    <div class="cta-btns">
+      <a href="#contact" class="btn-primary">预约一次对话</a>
+      <a href="#" class="btn-secondary">关注我的公众号</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="section contact-section" id="contact">
+  <div class="section-inner">
+    <div class="section-label">/ 联系我 /</div>
+    <div class="section-title">很高兴认识你</div>
+    <div class="section-desc">无论你想预约咨询、探讨合作，还是单纯想聊一聊——都可以通过这些方式找到我。</div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <h3>联系方式</h3>
+          <p>我会在24小时内回复你的消息。</p>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">&#9993;</div>
+          <div class="contact-detail">
+            <h4>邮箱</h4>
+            <span>wy2026_bnu@163.com</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">&#9742;</div>
+          <div class="contact-detail">
+            <h4>电话</h4>
+            <span>13120494350</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">&#9998;</div>
+          <div class="contact-detail">
+            <h4>微信</h4>
+            <span>xunmiali</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">&#9737;</div>
+          <div class="contact-detail">
+            <h4>所在地</h4>
+            <span>中国 · 北京</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h3>给我留言</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">你的名字</label>
+            <input type="text" id="name" placeholder="请输入你的名字" required>
+          </div>
+          <div class="form-group">
+            <label for="email">你的邮箱</label>
+            <input type="email" id="email" placeholder="请输入你的邮箱" required>
+          </div>
+          <div class="form-group">
+            <label for="message">你想说的话</label>
+            <textarea id="message" placeholder="无论是咨询、合作，还是单纯想聊一聊，都很欢迎。" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">发送消息</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-brand">王 燕</div>
+  <p>用15年教育深耕，陪你找到心的方向。</p>
+  <p style="margin-top:12px;">&copy; 2026 王燕 版权所有</p>
+  <p>京ICP备XXXXXXXX号 | <a href="#">隐私政策</a></p>
+</footer>
+
+<!-- ===== Scripts ===== -->
+<script>
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const nav = document.getElementById('nav');
+navToggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      nav.classList.remove('open');
+    }
+  });
+});
+
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  alert('感谢 ' + name + ' 的留言！我会尽快回复你。\n\n（演示模式：实际部署时请配置后端邮件服务）');
+  this.reset();
+});
+
+// Scroll reveal animation
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.value-card, .cap-card, .achievement-card, .timeline-content').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
